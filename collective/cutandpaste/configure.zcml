@@ -1,0 +1,47 @@
+ <configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:five="http://namespaces.zope.org/five"
+    xmlns:transmogrifier="http://namespaces.plone.org/transmogrifier"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    i18n_domain="collective.transmogrifier">
+   <include package="collective.transmogrifier" /> 
+   
+   <genericsetup:registerProfile
+      name="default"
+      title="collective.cutandpaste"
+      directory="profiles/default"
+      description="cut and paste profile"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+   
+   <transmogrifier:registerConfig
+      name="collective.cutandpaste"
+      title="data source for collective.cutandpaste"
+      description=""
+      configuration="cutandpaste.cfg"
+      />
+   
+   <utility
+    component=".blueprint.CSVSourceSection"
+    name="collective.cutandpaste.csvreader"
+    />
+
+
+   <utility
+    component=".blueprint.CutAndPaste"
+    name="collective.cutandpaste.main"
+    />
+
+   <utility
+    component=".blueprint.Printer"
+    name="collective.cutandpaste.printer"
+    />
+
+  <utility
+    component=".blueprint.FlushCache"
+    name="collective.cutandpaste.flushcache"
+    />
+
+
+</configure>

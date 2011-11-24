@@ -1,0 +1,5 @@
+global-include *.txt
+global-include *.ini
+global-include *.cfg
+global-include *.zcml
+global-include *.py
