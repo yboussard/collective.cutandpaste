@@ -132,11 +132,10 @@ class CutAndPaste(object):
             dst = '/'.join(traverser[:i])
             parent = self.context.restrictedTraverse(dst, None)
             
-            ## (['panels/europe/espagne/historique/ac-nielsen-espagne/2008/Semaine-46.08', 'panels/europe/espagne/historique/ac-nielsen-espagne/2008/', 'panels/europe/espagne/historique/ac-nielsen-espagne'], <ATFolder historique>)
         return (to_create_before, parent) 
         
     def createTree(self, parent , list_to_create):
-        ## list_to_create = ['panels/europe/espagne/historique/ac-nielsen-espagne/2008/Semaine-46.08', 'panels/europe/espagne/historique/ac-nielsen-espagne/2008/', 'panels/europe/espagne/historique/ac-nielsen-espagne']
+
         try:
             
             list_to_create.reverse()
