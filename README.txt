@@ -8,13 +8,19 @@ for copy and paste items for plone with an csv file
 csv file must have a minimun of two columns: src path and the dst path
 
 it's looks like that ::
- 
+
   src;dst
-  panels/dossier-en;panels2/dossier-en 
-  panels2/dossier;panels/dossier
-  panels/dossier;panels/panels3/dossier
-  panels2/dossier-en;panels/panels4/souspanels4/dossier-en 
-  
+  dir/sdir;dir2/sdir1
+  dir/sdir/ssdir1;dir2/sdir2
+  dir/sdir/ssdir2;dir2/sdir3
+
+The result must be :
+
+ - directory sdir is moved to dir2 and rename sdir1
+ - directory ssdir1 is moved to dir2 and rename sdir2
+ - directory ssdir2 is moved to dir2 and rename sdir3
+
+
 Use
 ---
 
@@ -49,7 +55,7 @@ Cut and paste process
 options :
 
  - path_src : the name of key for the src path
- - path_dst : the name of dst for the dst path 
+ - path_dst : the name of dst for the dst path
  - content_type : ATFolder (if dst path is not exists, the collective.cutandpaste.main create destination parent path for you)
 
 
@@ -58,8 +64,8 @@ collective.cutandpaste.flushcache
 
 Flush zodb cache (for keeping memory low)
 
-options : 
- 
+options :
+
  - every : flush cache every iterate (default 100)
 
 collective.cutandpaste.printer
@@ -70,7 +76,7 @@ define an csv file for output reports
 options :
 
  - file_out : path of the csv file fout output
- - delimiter : the delimiter 
- 
+ - delimiter : the delimiter
+
 
 
