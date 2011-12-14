@@ -4,7 +4,12 @@ Changelog
 1.1 (unreleased)
 ----------------
 
-- Nothing changed yet.
+- Add new options
+
+ * canfixtranslation : fix translation reference for lingua plone content
+ * langtranslations : define LP lang (just a couple seperated by comma)
+ * workflow_transition : define a workflow transition for newly created folder
+
 
 
 1.0 (2011-11-24)
